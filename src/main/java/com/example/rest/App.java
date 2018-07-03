@@ -49,25 +49,27 @@ public class App {
     private static void runGetRequest() {
  
     	// sample URL
-        String url = "http://129.157.179.180:3000/shield/33/45/pink/Yellane66";
-        CloseableHttpResponse response = null;
- 
-        try {
-            CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet(url);
-            response = httpclient.execute(httpGet);
-            String content = EntityUtils.toString(response.getEntity());
-            System.out.println("Server response: " + content);
-        } catch (IOException e) {
-            System.out.println(e);
-        } finally {
-            try {
-                if (response != null) {
-                    response.close();
-                }
-            } catch (IOException ie) {
-                System.out.println(ie);
-            }
-        }    
+     for (int y_pos = 0; y_pos <= 9; y_pos++){
+         String url = "http://129.157.179.180:3000/fighters/45/".y_pos."/pink/Yellane66"
+         CloseableHttpResponse response = null;
+
+         try {
+             CloseableHttpClient httpclient = HttpClients.createDefault();
+             HttpGet httpGet = new HttpGet(url);
+             response = httpclient.execute(httpGet);
+             String content = EntityUtils.toString(response.getEntity());
+             System.out.println("Server response: " + content);
+         } catch (IOException e) {
+             System.out.println(e);
+         } finally {
+             try {
+                 if (response != null) {
+                     response.close();
+                 }
+             } catch (IOException ie) {
+                 System.out.println(ie);
+             }
+         }
+      }
     }
 }
