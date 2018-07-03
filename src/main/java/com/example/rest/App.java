@@ -39,7 +39,7 @@ public class App {
         app.run(args);
  
         System.out.println("Server started");
- 
+        // My microservice!
         //runGetRequest();
     }
  
