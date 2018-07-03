@@ -40,7 +40,7 @@ public class App {
  
         System.out.println("Server started");
         // My microservice!
-        //runGetRequest();
+        runGetRequest();
     }
  
     /**
@@ -49,7 +49,7 @@ public class App {
     private static void runGetRequest() {
  
     	// sample URL
-        String url = "http://ip.jsontest.com/";
+        String url = "http://129.157.179.180:3000/shield/33/45/pink/Yellane66";
         CloseableHttpResponse response = null;
  
         try {
